@@ -1,0 +1,3 @@
+# AlatyrAtal (v1.0.0) — Proof-of-Quality-Adjusted-Inference Clearinghouse & Dual-Token (EFEMERA -> ETAMANGA) Engine (Unit of Ndimmôrwyn)
+
+> Open-source Rust, Solidity, Jiva/TOON, Web & MCP clearinghouse by Collins Takem (RASA-X-MACHINA). Transmutes verified AI compute into dual-token Burn-Mint Equilibrium and MiCA Title II CASP EURC settlement.

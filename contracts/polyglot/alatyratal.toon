@@ -1,0 +1,6 @@
+# ffp: FFP-ALATYRATAL-WIRE wire-codec toon
+@jiva.toon/v1 module=AlatyrAtal domain=Kamala ast=d8e2873d3a4661e5
+@k ALATYR-SPARK:INVERSE-EXHAUST => Reward compressed semantic density via AK-Zip and EGO over verbose token exhaust
+@k ATAL-BASALT:DUAL-BME => Asymmetric EFEMERA velocity to 30 percent ETAMANGA reserve lock gated by CR >= 1.15
+@rec ClearingEnvelope[48B]{epoch_id:u64@0,collateral_ratio_cr:f64@8,pool_hhi:f64@16,exogenous_lp_depth:f64@24,reasonwash_index:f64@32,mica_title_ii_floating:b1@40}
+@inv AtalBasaltAndArsiGate(ClearingEnvelope) => collateral_ratio_cr>=1.15 & pool_hhi<=0.65 & exogenous_lp_depth>=0.60 & reasonwash_index<=0.25 & mica_title_ii_floating==true

@@ -1,0 +1,22 @@
+// ffp: FFP-ALATYRATAL-JIVA contract jiva
+module AlatyrAtal @domain(Kamala) @ffp(FFP-ALATYRATAL-WIRE) {
+    kenning ALATYR-SPARK:INVERSE-EXHAUST = "Reward compressed semantic density via AK-Zip and EGO over verbose token exhaust";
+    kenning ATAL-BASALT:DUAL-BME = "Asymmetric EFEMERA velocity to 30 percent ETAMANGA reserve lock gated by CR >= 1.15";
+
+    record ClearingEnvelope {
+        epoch_id: u64,
+        collateral_ratio_cr: f64,
+        pool_hhi: f64,
+        exogenous_lp_depth: f64,
+        reasonwash_index: f64,
+        mica_title_ii_floating: bool,
+    }
+
+    invariant AtalBasaltAndArsiGate(ClearingEnvelope) {
+        collateral_ratio_cr >= 1.15;
+        pool_hhi <= 0.65;
+        exogenous_lp_depth >= 0.60;
+        reasonwash_index <= 0.25;
+        mica_title_ii_floating == true;
+    }
+}

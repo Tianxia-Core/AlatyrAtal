@@ -1,0 +1,13 @@
+# ffp: FFP-ALATYRATAL-CI content-pipeline yaml
+name: AlatyrAtal CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo test --all-targets
+      - run: cargo build --release

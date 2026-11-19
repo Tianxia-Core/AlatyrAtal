@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "AlatyrAtal: Proof-of-Quality-Adjusted-Inference Clearinghouse & Dual-Token Sovereign Settlement Engine"
+version: "1.0.0"
+date-released: "2026-11-19"
+license: "Apache-2.0"
+url: "https://github.com/Tianxia-Core/AlatyrAtal"
+authors:
+  - family-names: "Takem"
+    given-names: "Collins"
+    affiliation: "RASA-X-MACHINA"

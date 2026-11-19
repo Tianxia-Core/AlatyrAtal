@@ -1,0 +1,47 @@
+{
+  "compiler_version": "1.3.0",
+  "edition": "PUBLIC_CLEANROOM_SEED",
+  "module_name": "AlatyrAtal",
+  "domain": "Kamala",
+  "ffp_id": "FFP-ALATYRATAL-WIRE",
+  "ast_blake3": "d8e2873d3a4661e52c2f7bdf565176340f31ea448a9784f124ba1e82c2152971",
+  "toon_byte_savings_pct": 70.1,
+  "outputs": [
+    {
+      "target": "rust",
+      "relative_file": "alatyratal.rs",
+      "bytes": 1448,
+      "blake3_hex": "5669cccd1c6b8446a2b1a97e52ae425df956ca57823c0bab54ef97de495a8606"
+    },
+    {
+      "target": "zig",
+      "relative_file": "alatyratal.zig",
+      "bytes": 620,
+      "blake3_hex": "6fce1fa538393e65d1f27f6d5c465b408694ec535fcfe67e5d5c5b162a15493f"
+    },
+    {
+      "target": "ocaml",
+      "relative_file": "alatyratal.ml",
+      "bytes": 609,
+      "blake3_hex": "2a1f546626cbed967e1c709c829c8c85fe9e3e10dfad0cf597c8e122c082b5d1"
+    },
+    {
+      "target": "typescript",
+      "relative_file": "alatyratal.ts",
+      "bytes": 659,
+      "blake3_hex": "3f76371944475b1ba01e2900c86803d1f9bb8b6b364533ea25811f8757f18ab9"
+    },
+    {
+      "target": "nix",
+      "relative_file": "alatyratal.nix",
+      "bytes": 969,
+      "blake3_hex": "6bd3a0208a9a110550b33de7d121e77e27a480d5f99530df7dc197d948648e70"
+    },
+    {
+      "target": "toon",
+      "relative_file": "alatyratal.toon",
+      "bytes": 675,
+      "blake3_hex": "9db13526faa9f90233e855cf66e78607f93be0dd39230e4bca3ec744a641d9ff"
+    }
+  ]
+}

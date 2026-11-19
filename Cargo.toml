@@ -1,0 +1,25 @@
+# ffp: FFP-ALATYRATAL-CARGO declarative toml
+[package]
+name = "alatyratal"
+version = "1.0.0"
+edition = "2021"
+license = "Apache-2.0"
+authors = ["Collins Takem <coltak@rasaxmachina.com>"]
+description = "AlatyrAtal — Proof-of-Quality-Adjusted-Inference Clearinghouse, 4-Stratum Oracular Verifier & Dual-Token (EFEMERA -> ETAMANGA) Conversion Engine (Unit of Ndimmôrwyn)"
+repository = "https://github.com/Tianxia-Core/AlatyrAtal"
+homepage = "https://ndimmorwyn.rasaxmachina.com"
+keywords = ["ai-clearinghouse", "tokenomics", "neurosymbolic", "mica", "x402"]
+categories = ["cryptography", "compilers", "finance"]
+
+[dependencies]
+blake3 = { version = "1.8", features = ["std"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[lib]
+name = "alatyratal"
+path = "src/lib.rs"
+
+[[bin]]
+name = "alatyratal"
+path = "src/main.rs"

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- ffp: FFP-ALATYRATAL-WEB-COCKPIT frontend html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlatyrAtal · Proof-of-Quality-Adjusted-Inference Clearinghouse (Unit of Ndimmôrwyn)</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #101318;
+      --border: #222934;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #00f59b;
+      --cyan: #22d3ee;
+      --gold: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      padding: 2rem 1.25rem 4rem;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1.25rem; margin-bottom: 1.75rem; }
+    .eyebrow { color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    h1 { font-size: 2rem; margin: 0.35rem 0 0.5rem; }
+    .sub { color: var(--muted); max-width: 78ch; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.35rem; margin-bottom: 1.5rem; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 1.35rem; }
+    .card h2 { font-size: 1rem; color: var(--cyan); margin-bottom: 0.9rem; }
+    label { display: block; font-size: 0.86rem; margin-bottom: 0.8rem; }
+    label span { display: flex; justify-content: space-between; margin-bottom: 0.25rem; font-weight: 600; }
+    input[type="range"] { width: 100%; }
+    .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .kpi { background: #0b0d11; border: 1px solid var(--border); border-radius: 10px; padding: 0.85rem; }
+    .kpi-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+    .kpi-val { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-top: 0.15rem; }
+    .kpi-sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.12rem; }
+    .badge { display: inline-block; font-family: monospace; font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: rgba(0,245,155,0.12); color: var(--accent); margin-top: 0.6rem; }
+    .badge.halt { background: rgba(239,68,68,0.18); color: #f87171; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-top: 0.5rem; }
+    th, td { text-align: left; padding: 0.55rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--cyan); font-size: 0.76rem; text-transform: uppercase; }
+    footer { margin-top: 2rem; font-size: 0.83rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+    a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">Unit of Ndimmôrwyn · Alatyr (Spark) → 4-Stratum Oracle → Atal (Nsibidi Inscription)</p>
+      <h1>AlatyrAtal Sovereign Clearinghouse Workbench</h1>
+      <p class="sub">Cryptographically attested Proof-of-Quality-Adjusted-Inference clearinghouse converting verified AI compute into dual-token Burn-Mint Equilibrium (<code>EFEMERA</code> velocity on Base/Solana → <code>30.0%</code> <code>ETAMANGA</code> reserve locks on Substrate) and EU MiCA Title II compliant <code>EUR</code> CASP settlement.</p>
+    </header>
+
+    <section class="grid" aria-label="Interactive AlatyrAtal Simulator">
+      <div class="card">
+        <h2>1. Alatyr Spark &amp; Stratum-0 Basalt Inputs</h2>
+        <label for="eurIn">
+          <span>Compute / MCA Batch Notional (EUR) <strong id="eurOut">€250.00</strong></span>
+          <input id="eurIn" type="range" min="0.05" max="25000" step="10" value="250" />
+        </label>
+        <label for="rawTok">
+          <span>Raw DAG Tokens <strong id="rawOut">500</strong></span>
+          <input id="rawTok" type="range" min="10" max="5000" step="10" value="500" />
+        </label>
+        <label for="compTok">
+          <span>AK-Zip Compressed Tokens <strong id="compOut">2</strong></span>
+          <input id="compTok" type="range" min="2" max="500" step="2" value="2" />
+        </label>
+        <label for="crIn">
+          <span>Collateralization Ratio (CR &ge; 1.15 Gate) <strong id="crOut">1.42x</strong></span>
+          <input id="crIn" type="range" min="1.00" max="2.20" step="0.01" value="1.42" />
+        </label>
+        <label for="rwIn">
+          <span>ARSI Reasonwash Index (I_RW &le; 0.25 Gate) <strong id="rwOut">0.09</strong></span>
+          <input id="rwIn" type="range" min="0.01" max="0.60" step="0.01" value="0.09" />
+        </label>
+      </div>
+
+      <div class="card" aria-live="polite">
+        <h2>2. Live 4-Stratum &amp; Atal BME Inscription</h2>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="kpi-lbl">Semantic Density Multiplier</div>
+            <div class="kpi-val" id="kMult">2.50×</div>
+            <div class="kpi-sub" id="kTier">Full 4-Stratum ARSI Quorum</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-lbl">Net EFEMERA Minted</div>
+            <div class="kpi-val" id="kEfm">4,925.00</div>
+            <div class="kpi-sub">ERC-2981 4-party split active</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-lbl">Protocol Revenue (84% GM)</div>
+            <div class="kpi-val" id="kRev">€5.88</div>
+            <div class="kpi-sub" id="kProfit">Gross Profit: €4.94 (MIF+50)</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-lbl">ETAMANGA Locked (30% Sink)</div>
+            <div class="kpi-val" id="kEtm">0.74 ETM</div>
+            <div class="kpi-sub">Exogenous EURC LP &ge; 60%</div>
+          </div>
+        </div>
+        <div id="gateBadge" class="badge">⟦NSB:0x03⟧ APPROVED · MiCA Title II Floating Utility · CASP EURC Rail</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Counterintuitive Architecture Matrix (Why AlatyrAtal Outperforms Naive DePIN Billing)</h2>
+      <table>
+        <thead>
+          <tr><th>Layer</th><th>Mythological Function</th><th>Counterintuitive Engineering Mechanism</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Alatyr</strong></td><td>Slavic Spark of Svarog's Hammer</td><td>Rewards <strong>AK-Zip + EGO compression</strong> rather than verbose token exhaust.</td></tr>
+          <tr><td><strong>Ebhu Njom</strong></td><td>Manyu Divination Threshold Stone</td><td>Routes <code>&lt; €0.50</code> micro-calls in <code>&le; 14ms</code> (Strata 0–1 + Jivaslokan); reserves Stratum 3 for high-stakes covenants.</td></tr>
+          <tr><td><strong>4-Stratum Oracle</strong></td><td>Symbolic + 1-Bit + ARSI Consensus</td><td>Executes Stratum-0 symbolic math <em>before</em> neural weights; rejects post-hoc <code>I_Reasonwash &gt; 0.25</code>.</td></tr>
+          <tr><td><strong>Atal</strong></td><td>Manyu Nsibidi Basalt Monolith</td><td>Pairs high-velocity <code>EFEMERA</code> with <code>30%</code> <code>ETAMANGA</code> reserve locks + <code>CR &ge; 1.15</code> circuit breaker &amp; licensed MiCA CASP EURC rails.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <span>Open-Source Apache-2.0 · <a href="https://github.com/Tianxia-Core/AlatyrAtal">Tianxia-Core/AlatyrAtal</a></span>
+      <span>Parent Organism: <a href="https://github.com/Tianxia-Core/Ndimmorwyn">Ndimmôrwyn</a> · <a href="https://github.com/Tianxia-Core/Jivascriptocle">Jivascriptocle</a> · <a href="https://github.com/Tianxia-Core/Tetraledger">Tetraledger</a> · <a href="https://rasaxmachina.com">rasaxmachina.com</a></span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const ids = ["eurIn", "rawTok", "compTok", "crIn", "rwIn"];
+      const el = Object.fromEntries(ids.map((i) => [i, document.getElementById(i)]));
+      function update() {
+        const eur = Number(el.eurIn.value);
+        const raw = Number(el.rawTok.value);
+        const comp = Math.min(raw, Number(el.compTok.value));
+        const cr = Number(el.crIn.value);
+        const rw = Number(el.rwIn.value);
+
+        document.getElementById("eurOut").textContent = "€" + eur.toFixed(2);
+        document.getElementById("rawOut").textContent = String(raw);
+        document.getElementById("compOut").textContent = String(comp);
+        document.getElementById("crOut").textContent = cr.toFixed(2) + "x";
+        document.getElementById("rwOut").textContent = rw.toFixed(2);
+
+        const ratio = raw / Math.max(1, comp);
+        const mult = Math.min(2.5, Math.max(1.0, 1.0 + Math.log(Math.max(1, ratio)) * 0.28));
+        const fastLane = eur < 0.50;
+        const ok = cr >= 1.15 && (fastLane || rw <= 0.25);
+
+        const rev = ok ? eur * (0.015 + 0.005 + 0.0035) + (fastLane ? 0 : 0.002) : 0;
+        const gp = rev * 0.84;
+        const etmEur = rev * 0.30;
+        const efm = ok ? ((eur * 0.985) / 0.125) * mult : 0;
+
+        document.getElementById("kMult").textContent = mult.toFixed(2) + "×";
+        document.getElementById("kTier").textContent = fastLane ? "Ebhu Njom <=14ms Fast Lane" : "Full 4-Stratum ARSI Quorum";
+        document.getElementById("kEfm").textContent = efm.toLocaleString("en-IE", { maximumFractionDigits: 2 });
+        document.getElementById("kRev").textContent = "€" + rev.toFixed(2);
+        document.getElementById("kProfit").textContent = "Gross Profit: €" + gp.toFixed(2) + " (84% GM)";
+        document.getElementById("kEtm").textContent = (etmEur / 2.4).toFixed(3) + " ETM";
+
+        const badge = document.getElementById("gateBadge");
+        if (ok) {
+          badge.className = "badge";
+          badge.textContent = "⟦NSB:0x03⟧ APPROVED · MiCA Title II Floating Utility · CASP EURC Rail";
+        } else {
+          badge.className = "badge halt";
+          badge.textContent = cr < 1.15
+            ? "⟦NSB:0x04⟧ HALTED · Stratum-0 Circuit Breaker (CR < 1.15)"
+            : "⟦NSB:0x04⟧ HALTED · Stratum-3 ARSI Reasonwashing Blocked (I_RW > 0.25)";
+        }
+      }
+      ids.forEach((i) => el[i].addEventListener("input", update));
+      update();
+    })();
+  </script>
+</body>
+</html>
